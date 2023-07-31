@@ -1,0 +1,230 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerMecanico.views.Cliente.EstatusVehiculo">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#E6E6E6" Padding="10">
+
+            <!-- Contenedor principal -->
+            <StackLayout Padding="20" Spacing="10" BackgroundColor="#e6e6e6">
+
+                <!-- Título -->
+                <Label Text="Estado del Vehículo" FontSize="Title" HorizontalOptions="Center" TextColor="#09385c" />
+
+                <!-- Lista de estados -->
+                <StackLayout Spacing="10">
+
+                    <!-- Item de estado -->
+                    <Frame BackgroundColor="White"
+           Padding="20"
+           CornerRadius="10"
+           HasShadow="True"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="StartAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <!-- Icono del estado -->
+                            <Frame BackgroundColor="#fa603c"
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   CornerRadius="30"
+                   Padding="0"
+                   VerticalOptions="Center"
+                   HasShadow="False"
+                   HorizontalOptions="Start">
+
+                                <Image Source="entregar_vehiculo.png" Aspect="AspectFill" />
+                            </Frame>
+
+                            <!-- Texto del estado -->
+                            <Label Text="Entregar Vehículo" FontSize="Subtitle" TextColor="#333" VerticalOptions="Center" />
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="EndAndExpand">
+
+                                <Image Source="palomita.png" Aspect="AspectFit" />
+                            </Frame>
+                        </StackLayout>
+
+                    </Frame>
+                    <!--Estado de preparar vehiculo-->
+                    <Frame BackgroundColor="White"
+                           Padding="20"
+                           CornerRadius="10"
+                           HasShadow="True"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <!-- Icono del estado -->
+                            <Frame BackgroundColor="Transparent"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="Start">
+
+                                <Image Source="Preparandose_mantenimiento.png" Aspect="AspectFit" />
+                            </Frame>
+
+                            <!-- Texto del estado -->
+                            <Label Text="Preparar coche" FontSize="Subtitle" TextColor="#333" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="EndAndExpand">
+
+                                <Image Source="tache.png" Aspect="AspectFit" />
+                            </Frame>
+                        </StackLayout>
+
+                    </Frame>
+
+                    <!--Estado de Dar mantenimiento-->
+                    <Frame BackgroundColor="White"
+                           Padding="20"
+                           CornerRadius="10"
+                           HasShadow="True"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <!-- Icono del estado -->
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="Start">
+
+                                <Image Source="Dar_mantenimiento.png" Aspect="AspectFit" />
+                            </Frame>
+
+                            <!-- Texto del estado -->
+                            <Label Text="Dar mantenimiento" FontSize="Subtitle" TextColor="#333" VerticalOptions="Center" />
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="EndAndExpand">
+
+                                <Image Source="tache.png" Aspect="AspectFit" />
+                            </Frame>
+                        </StackLayout>
+
+                    </Frame>
+                    
+                    
+                    <!-- Agrega más items de estado siguiendo el mismo patrón -->
+
+                    <Frame BackgroundColor="White"
+                           Padding="20"
+                           CornerRadius="10"
+                           HasShadow="True"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <!-- Icono del estado -->
+                            <Frame BackgroundColor="#f2f2f2"
+                                   BorderColor="#fa603c"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="Start">
+
+                                <Image Source="termino_mantenimiento.png" Aspect="AspectFit" />
+                            </Frame>
+
+                            <!-- Texto del estado -->
+                            <Label Text="Finalizar" FontSize="Subtitle" TextColor="#333" VerticalOptions="Center" />
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="EndAndExpand">
+
+                                <Image Source="tache.png" Aspect="AspectFit" />
+                            </Frame>
+
+                        </StackLayout>
+
+                    </Frame>
+
+                    <!--Estado de recoger vehiculo-->
+                    <Frame BackgroundColor="White"
+                           Padding="20"
+                           CornerRadius="10"
+                           HasShadow="True"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <!-- Icono del estado -->
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="Start">
+
+                                <Image Source="Recoger_vehiculo.png" Aspect="AspectFit" />
+                            </Frame>
+
+                            <!-- Texto del estado -->
+                            <Label Text="Recoger vehiculo" FontSize="Subtitle" TextColor="#333" VerticalOptions="Center" />
+
+                            <Frame BackgroundColor="#fa603c"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   CornerRadius="30"
+                                   Padding="0"
+                                   VerticalOptions="Center"
+                                   HasShadow="False"
+                                   HorizontalOptions="EndAndExpand">
+
+                                <Image Source="tache.png" Aspect="AspectFit" />
+                            </Frame>
+
+                        </StackLayout>
+                        
+
+                    </Frame>
+
+                    <!-- Agrega más items de estado siguiendo el mismo patrón -->
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

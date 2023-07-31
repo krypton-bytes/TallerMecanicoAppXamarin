@@ -1,0 +1,104 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerMecanico.views.Cliente.FormularioVehiculo"
+             BackgroundColor="#e6e6e6">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="FormFieldLabelStyle">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="#333" />
+            <Setter Property="Margin" Value="0,5,0,0" />
+        </Style>
+        <Style TargetType="Picker" x:Key="FormPickerStyle">
+            <Setter Property="Title" Value="Seleccionar" />
+            <Setter Property="TextColor" Value="Black" />
+            <!-- Establecemos el color de texto predeterminado -->
+            <Setter Property="Margin" Value="0,5,0,10" />
+        </Style>
+        <Style TargetType="DatePicker" x:Key="FormDatePickerStyle">
+            <Setter Property="Margin" Value="0,5,0,10" />
+            <Setter Property="TextColor" Value="Black" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout BackgroundColor="Black">
+        <Grid>
+            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="170" Padding="0" Margin="0">
+                    <Image Source="font.jpg" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="0" Margin="10,80,10,0" HorizontalOptions="FillAndExpand" >
+                <Frame  BackgroundColor="White" HeightRequest="650" HasShadow="True" Padding="0" Margin="0">
+
+                    <StackLayout >
+
+                        <StackLayout Margin="10">
+                            <Label Text="Registro" TextColor="Black" FontSize="Title" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="50" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="vehiculo.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+      
+                                    <Picker Style="{StaticResource FormPickerStyle}" Title="Seleccionar vehiculo" TitleColor="Black" >
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Vehículo</x:String>
+                                                <x:String>Moto</x:String>
+                                                <x:String>Trailer</x:String>
+                                                <x:String>Camioneta</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="50" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="servicio.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+      
+                                    <Picker Style="{StaticResource FormPickerStyle}" Title="Seleccionar servicio" TitleColor="Black">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Cambio de Aceite</x:String>
+                                                <x:String>Cambio de Balatas</x:String>
+                                                <x:String>Revisión General</x:String>
+                                                <x:String>Alineación y Balanceo</x:String>
+                                                <!-- Agrega más opciones aquí -->
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="50" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="calendario.png" Aspect="AspectFit" Margin="0"/>
+                                    </Frame>
+
+                                    <DatePicker Style="{StaticResource FormDatePickerStyle}" />
+                                </StackLayout>
+                            </Frame>
+
+
+                            <Frame BackgroundColor="Transparent" Margin="0,15,0,0">
+                                <Button x:Name="btnEntrar" Text="Registrar" BackgroundColor="#09385c" TextColor="White" CornerRadius="30" 
+                                        />
+                            </Frame>
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
