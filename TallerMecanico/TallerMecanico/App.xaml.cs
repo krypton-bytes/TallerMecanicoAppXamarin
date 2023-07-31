@@ -1,6 +1,7 @@
 ﻿using System;
 using TallerMecanico.views;
 using TallerMecanico.views.Cliente;
+using TallerMecanico.views.Mecanica;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace TallerMecanico
         public App()
         {
             InitializeComponent();
-            MainPage = new EstatusVehiculo();
+            MainPage = new GenerarCodigosQR(); 
             //MainPage = new NavigationPage(new inicio());
         }
 
