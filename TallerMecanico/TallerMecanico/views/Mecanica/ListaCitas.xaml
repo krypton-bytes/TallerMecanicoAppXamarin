@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerMecanico.views.Mecanica.ListaCitas">
+    <ContentPage.Content>
+        <!-- ListView personalizado -->
+        <ListView x:Name="citasListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Imagen del vehículo -->
+                            <Image Source="{Binding VehiculoImagen}" HeightRequest="60" WidthRequest="60" Aspect="AspectFit" Grid.RowSpan="2" />
+
+                            <!-- Nombre del cliente -->
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" FontSize="16" />
+
+                            <!-- Email -->
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Email}" FontSize="14" TextColor="#666" />
+
+                            <!-- Vehículo -->
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Vehiculo}" FontSize="14" TextColor="#666" />
+
+                            <!-- Servicio -->
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Servicio}" FontSize="14" TextColor="#666" />
+
+                            <!-- Fecha -->
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Fecha}" FontSize="14" TextColor="#666" HorizontalOptions="End" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

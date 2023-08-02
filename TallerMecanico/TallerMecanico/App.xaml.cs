@@ -12,8 +12,8 @@ namespace TallerMecanico
         public App()
         {
             InitializeComponent();
-            MainPage = new GenerarCodigosQR(); 
-            //MainPage = new NavigationPage(new inicio());
+            //MainPage = new InicioMecanica(); 
+            MainPage = new NavigationPage(new inicio());
         }
 
         protected override void OnStart()

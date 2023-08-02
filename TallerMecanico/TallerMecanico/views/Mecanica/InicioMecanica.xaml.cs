@@ -16,5 +16,15 @@ namespace TallerMecanico.views.Mecanica
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void CodigoQR_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GenerarCodigosQR());
+        }
+
+        private void Citas_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListaCitas());
+        }
+    }
 }

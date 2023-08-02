@@ -1,45 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TallerMecanico.views.Mecanica.InicioMecanica">
-    <ContentPage.Content>
-        <!-- ListView personalizado -->
-        <ListView x:Name="citasListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10" RowSpacing="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+             x:Class="TallerMecanico.views.Mecanica.InicioMecanica"
+             Title="Inicio Mecanica">
+    <ContentPage.Resources>
+        <Style TargetType="Image" x:Key="IconImageStyle">
+            <Setter Property="WidthRequest" Value="70" />
+            <Setter Property="HeightRequest" Value="70" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <!-- Cambio de AspectFill a AspectFit -->
+        </Style>
+    </ContentPage.Resources>
 
-                            <!-- Imagen del vehículo -->
-                            <Image Source="{Binding VehiculoImagen}" HeightRequest="60" WidthRequest="60" Aspect="AspectFit" Grid.RowSpan="2" />
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+            <Frame HeightRequest="170" Padding="0" Margin="0">
+                <Image Source="font.jpg" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Padding="0" Margin="10,-70,10,0" HorizontalOptions="FillAndExpand"  >
+            <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="50" Margin="0">
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20">
+                    <Frame CornerRadius="30" HasShadow="True" BackgroundColor="#4CAF50" WidthRequest="160" HeightRequest="160" VerticalOptions="CenterAndExpand">
+                        <ImageButton Source="codigoqr.png" Style="{StaticResource IconImageStyle}" BackgroundColor="Transparent" x:Name="codigoQR" Clicked="CodigoQR_Clicked"/>
+                    </Frame>
+                    <Label Text="Codigos QR's" FontSize="18" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" />
 
-                            <!-- Nombre del cliente -->
-                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" FontSize="16" />
+                    <Frame CornerRadius="30" HasShadow="True" BackgroundColor="#2196F3" WidthRequest="160" HeightRequest="160" VerticalOptions="CenterAndExpand">
+                        <ImageButton Source="cita.png" Style="{StaticResource IconImageStyle}" BackgroundColor="Transparent" x:Name="listaCitas" Clicked="Citas_Clicked"/>
+                    </Frame>
+                    <Label Text="Lista de citas" FontSize="18" FontAttributes="Bold" TextColor="#333" HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
 
-                            <!-- Email -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Email}" FontSize="14" TextColor="#666" />
-
-                            <!-- Vehículo -->
-                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Vehiculo}" FontSize="14" TextColor="#666" />
-
-                            <!-- Servicio -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Servicio}" FontSize="14" TextColor="#666" />
-
-                            <!-- Fecha -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Fecha}" FontSize="14" TextColor="#666" HorizontalOptions="End" />
-
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
+        <!-- Pie de página -->
+        <StackLayout Padding="20, 0, 20, 40" VerticalOptions="End">
+            <Label Text="© 2023 Derechos Reservados" FontSize="12" TextColor="#9B9B9B" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

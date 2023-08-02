@@ -92,7 +92,7 @@
 
                             <Frame BackgroundColor="Transparent" Margin="0,15,0,0">
                                 <Button x:Name="btnEntrar" Text="Registrar" BackgroundColor="#09385c" TextColor="White" CornerRadius="30" 
-                                        />
+                                        Clicked="btnEntrar_Clicked"/>
                             </Frame>
 
                         </StackLayout>

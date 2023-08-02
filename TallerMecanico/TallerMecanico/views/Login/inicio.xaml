@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TallerMecanico.views.inicio">
+             x:Class="TallerMecanico.views.inicio"
+             Title="Login">
     <StackLayout BackgroundColor="#e6e6e6">
         <Grid>
             <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
@@ -49,7 +50,7 @@
 
                             </StackLayout>
 
-                            <Button x:Name="btnEntrar" Text="Entrar" BackgroundColor="#09385c" TextColor="White" CornerRadius="30"  />
+                            <Button x:Name="btnEntrar" Text="Entrar" BackgroundColor="#09385c" TextColor="White" CornerRadius="30" Clicked="btnEntrar_Clicked" />
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                 <Label Text="¿No esta Registrado?" TextColor="DarkGray" FontSize="Small"/>
                                 <Label x:Name="lblRegistro" Text="Registrarse" TextColor="#09385c" FontAttributes="Bold" FontSize="Small"/>
