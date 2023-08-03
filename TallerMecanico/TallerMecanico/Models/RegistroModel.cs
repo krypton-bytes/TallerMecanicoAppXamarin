@@ -13,7 +13,5 @@ namespace TallerMecanico.Models
         public string Telefono { get; set; }
         public string Contrasena { get; set; }
         public bool Permiso { get; set; }
-
-        public virtual List<CitaModel> Citas { get; set; }
     }
 }

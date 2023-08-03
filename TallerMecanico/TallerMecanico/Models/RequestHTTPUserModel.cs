@@ -53,6 +53,7 @@ namespace TallerMecanico.Models
             peticionHttp.PedirComunicacion("Registros/VerficarCuenta", MetodoHTTP.POST, TipoContenido.JSON);
             peticionHttp.enviarDatos(enviarJson);
             string data = peticionHttp.ObtenerJson();
+            Debug.WriteLine($"JSON enviado:{data}");
             if (data == null)
             {
                 return null;

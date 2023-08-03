@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TallerMecanico.Models;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TallerMecanico.views.Login
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Registro : ContentPage
+    public partial class Register : ContentPage
     {
-        public Registro()
+        public Register()
         {
             InitializeComponent();
         }

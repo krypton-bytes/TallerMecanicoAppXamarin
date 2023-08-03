@@ -20,13 +20,13 @@ namespace TallerMecanico.views
             tapGestureRecognizer.Tapped += (sender, e) =>
             {
                 // Realizar la navegación a la página "Registro"
-                Navigation.PushAsync(new Registro());
+                Navigation.PushAsync(new Register());
             };
 
             lblRegistro.GestureRecognizers.Add(tapGestureRecognizer);
         }
 
-        private async void btnEntrar_Clicked(object sender, EventArgs e)
+        private void btnEntrar_Clicked(object sender, EventArgs e)
         {
             RequestHTTPUserModel usuario = new RequestHTTPUserModel();
             // Obtener los valores de correo y contraseña desde las cajas de texto (txtEmail y txtPassword)
@@ -43,18 +43,18 @@ namespace TallerMecanico.views
             // Llamar al método VerificarCuenta del modelo de usuario
             RegistroModel resultado = usuario.VerficarCuenta(registroModel);
 
-            if (resultado.Permiso == true)
+            if (resultado.Contrasena == contrasena && resultado.Correo == correo && resultado.Permiso == false)
             {
-                await Navigation.PushAsync(new Mecanica.InicioMecanica());
+                 Navigation.PushAsync(new Cliente.InicioCliente());
             }
-            else if (resultado.Permiso == false)
+            else if (resultado.Contrasena == contrasena && resultado.Correo == correo && resultado.Permiso == true)
             {
-                await Navigation.PushAsync(new Cliente.InicioCliente());
+                 Navigation.PushAsync(new Mecanica.InicioMecanica());
             }
             else if(resultado == null)
             {
                 // Si el resultado no es "true" ni "permisoConcedido", mostrar un mensaje de error
-                await DisplayAlert("Error", "Usuario o contraseña incorrectos", "OK");
+                 DisplayAlert("Error", "Usuario o contraseña incorrectos", "OK");
             }
         }
     }

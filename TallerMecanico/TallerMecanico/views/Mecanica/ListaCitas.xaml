@@ -4,11 +4,11 @@
              x:Class="TallerMecanico.views.Mecanica.ListaCitas">
     <ContentPage.Content>
         <!-- ListView personalizado -->
-        <ListView x:Name="citasListView">
+        <ListView x:Name="citasListView" RowHeight="100" SeparatorVisibility="None"  >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10" RowSpacing="5">
+                        <Grid Padding="5" RowSpacing="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -19,22 +19,20 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Imagen del vehículo -->
-                            <Image Source="{Binding VehiculoImagen}" HeightRequest="60" WidthRequest="60" Aspect="AspectFit" Grid.RowSpan="2" />
+                            <Image Source="calendario.png" HeightRequest="60" WidthRequest="60" Aspect="AspectFit" Grid.RowSpan="4" />
 
                             <!-- Nombre del cliente -->
-                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding NombreCliente}" FontSize="16" />
+                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding Registro.Nombre}" FontSize="14" TextColor="#fff"/>
 
-                            <!-- Email -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Email}" FontSize="14" TextColor="#666" />
 
                             <!-- Vehículo -->
-                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Vehiculo}" FontSize="14" TextColor="#666" />
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding Vehiculo}" FontSize="14" TextColor="#fff" />
 
                             <!-- Servicio -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Servicio}" FontSize="14" TextColor="#666" />
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Servicio}" FontSize="14" TextColor="#fff" />
 
                             <!-- Fecha -->
-                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Fecha}" FontSize="14" TextColor="#666" HorizontalOptions="End" />
+                            <Label Grid.Column="1" Grid.Row="3" Text="{Binding Fecha}" FontSize="14" TextColor="#fff" HorizontalOptions="End" />
 
                         </Grid>
                     </ViewCell>
